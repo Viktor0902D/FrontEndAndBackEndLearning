@@ -1,0 +1,48 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    max-width: 1200px;
+    margin: 15% auto;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+}
+h1{
+    font-size: 5.5rem;
+    margin-bottom: 1%;
+}
+.count{
+    font-size: 5.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.buttons{
+    margin: 4% auto;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.buttons button{
+    padding: 0.5rem 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: solid 3px darkblue;
+    border-radius: 10px;
+    color: darkblue;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(30, 12, 115, 0.4);
+    
+}
+.buttons button:hover{
+    background-color: darkblue;
+    color: white;
+    transition: all 0.2s ease;
+}
+.buttons button:active{
+    transform: translateY(3px);
+    transition: none;
+}

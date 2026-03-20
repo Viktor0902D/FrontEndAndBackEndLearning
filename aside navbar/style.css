@@ -1,0 +1,100 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: #f1f5f8;
+}
+.sidebar-toggle {
+    background-color: transparent;
+    color: rgb(84, 84, 213);
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    float: right;
+    margin: 1.2rem;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: aliceblue;
+    width: 400px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    
+}
+.show-sidebar{
+    transform: translateX(0);
+    transition: all 0.3s ease;
+}
+.sidebar-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+.logo{
+    font-size: 2rem;
+    margin-left: 0.5rem;
+}
+.logo span{
+    color: rgb(84, 84, 213);
+}
+.close-btn{
+    display: flex;
+    float: right;
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: rgb(214, 12, 12);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.close-btn:hover{
+    transform: rotate(720deg);
+    transition: all 0.5s ease-out;
+}
+
+.links{
+    display:block;
+    list-style-type: none;
+    margin: 0.5rem;
+    font-size: 1.9rem;
+   
+}
+.links li{
+    margin: 1.5rem;
+    transition: all 0.3s ease;
+     border-radius: 0.25rem;
+}
+.links li a{
+    display: block;
+    color: rgb(84, 84, 213);
+    font-weight: 600;
+    text-decoration: none;
+}
+.links li a:hover{
+    transform: translateX(-7%);
+    transform: scale(1.10);
+    transition: all 0.3s ease-out;
+}
+.social-icons{
+    display:flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 0.8rem;
+    font-size: 1.7rem;
+    margin-right: 2.5rem;
+}
+.social-icons li a{
+    color: rgb(84, 84, 213);
+}
+@media screen and (max-width: 676px) {
+    .sidebar{
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+}

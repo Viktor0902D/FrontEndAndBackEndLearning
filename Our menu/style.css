@@ -1,0 +1,155 @@
+/* ========== 
+Variables 
+==========
+*/
+:root {
+  --clr-gold: #c59d5f;
+  --clr-black: #222;
+  --clr-white: #fff;
+  --clr-grey-1: #102a42;
+  --clr-grey-5: #617d98;
+  --clr-grey-10: #f1f5f8;
+  --transition: all 0.3s ease-out;
+  --spacing: 0.1rem;
+  --radius: 0.5rem;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== 
+Global Styles 
+==========
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+/* ========== 
+Menu Section 
+==========
+*/
+.menu {
+  padding: 6.5rem 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+}
+
+.underline {
+  width: 10rem;
+  height: 0.3rem;
+  background: var(--clr-gold);
+  border-radius: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+}
+
+/* =========
+Filter Buttons
+=========
+*/
+.btn-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    gap: 2rem;
+}
+.filter-btn{
+    border: 2px solid var(--clr-gold);
+    border-radius: 0.5rem;
+    color: #c59d5f;
+    background-color: var(--clr-grey-10);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+.filter-btn:hover{
+    background-color: var(--clr-gold);
+    color: var(--clr-grey-10);
+    transition: var(--transition);
+    transform: scale(1.1);
+}
+/* ========== 
+Single Item 
+==========
+*/
+.menu-item {
+  display: grid;
+  gap: 1rem 2rem;
+  max-width: 50rem;
+}
+
+.photo {
+  object-fit: cover;
+  height: 350px;
+  width: 100%;
+  border: 0.25rem solid var(--clr-gold);
+  border-radius: var(--radius);
+  display: block;
+}
+
+.item-info header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid var(--clr-grey-5);
+  margin-bottom: 0.2rem;
+  padding-bottom: 0.5rem;
+}
+
+.item-info h4 {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
+.price {
+  color: var(--clr-gold);
+}
+
+.item-text {
+  margin-bottom: 0;
+  padding-top: 1rem;
+  color: var(--clr-grey-5);
+}
+
+/* ========== 
+Responsive Desktop Design
+==========
+*/
+@media screen and (min-width: 768px) {
+  .menu-item {
+    grid-template-columns: 250px 1fr;
+    gap: 0 1.25rem;
+  }
+  .photo {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-center {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr; /* Two columns for large screens */
+  }
+}

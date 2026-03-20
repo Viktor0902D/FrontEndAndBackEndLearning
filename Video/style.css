@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0%;
+}
+.preloader {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  transition: all 0.3s ease-in;
+  visibility: visible;
+  z-index: 999;
+}
+.hide-preloader{
+    visibility: hidden;
+  z-index: -999;
+}
+section {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.video-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -10;
+}
+h1 {
+  color: aliceblue;
+  font-size: 3.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.switch-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 9%;
+  left: 9%;
+  width: 8rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+}
+.switch-btn span {
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(76, 189, 230);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.switch {
+  position: absolute;
+  background-color: currentColor;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  display: block;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+}
+.slide .switch {
+  left: 50%;
+}
+section::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}

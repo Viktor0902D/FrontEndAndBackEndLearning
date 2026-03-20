@@ -1,0 +1,106 @@
+/* --- 1. Глобални променливи --- */
+:root {
+    --primary-color: #2563EB;
+    --text-dark: #1F2937;
+    --bg-light: rgba(255, 255, 255, 0.9);
+    --transition: all 0.3s ease;
+}
+
+/* --- 2. Основен контейнер (Glassmorphism & Sticky) --- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--bg-light);
+    backdrop-filter: blur(10px); /* Стъкленият ефект */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Разпределя логото, менюто и бутона */
+    align-items: center; /* Центрира ги вертикално */
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- 3. Лого и Линкове --- */
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+.nav-logo span { color: var(--primary-color); }
+
+.nav-menu {
+    display: flex;
+    gap: 2rem; /* Модерният начин за разстояние между линкове */
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+/* --- 4. CTA Бутон --- */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: #1D4ED8;
+    transform: translateY(-2px);
+}
+
+/* --- 5. Мобилно меню (Скрито по подразбиране) --- */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text-dark);
+    transition: var(--transition);
+}
+
+/* --- 6. Респонсив Дизайн (За екрани под 768px) --- */
+@media (max-width: 768px) {
+    .hamburger { display: block; } /* Показваме хамбургера */
+    
+    .nav-actions { display: none; } /* Скриваме CTA бутона */
+
+    .nav-menu {
+        position: fixed;
+        left: -100%; /* Скрито извън екрана вляво */
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0; /* Плъзга се в екрана, когато добавим клас 'active' чрез JS */
+    }
+}
