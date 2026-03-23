@@ -64,8 +64,8 @@ const people = [
 
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
-//  const inventors1500s=inventors.filter(inventor=>inventor.year<1600 && inventor.year>1499);
-//  console.table(inventors1500s);
+ const inventors1500s=inventors.filter(inventor=>inventor.year<1600 && inventor.year>1499);
+ console.table(inventors1500s);
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
 // const fullnames=inventors.map(inventor=>`${inventor.first},${inventor.last}`);
@@ -115,10 +115,9 @@ const data = [
 ];
 const transportation = data.reduce((obj, item) => {
   if (!obj[item]) {
-    obj[item] = 1;
+    obj[item] = 0;
   } 
  obj[item]++;
   return obj;
 },{});
-
 console.log(transportation);
