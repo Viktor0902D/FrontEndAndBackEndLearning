@@ -47,8 +47,28 @@ console.log(employee);
 console.log(salary);
 
 //Exercise 7
+const items=['b','a','f', 'g','i'];
+const [first,...rest]=items;
+console.log(first);
+const [last]=rest[rest.length-1]
+console.log(last);
+const middle=rest.slice(0,-1);
+console.log(...middle);
 //Exercise 8
+const fruits1=['banana','apple','kiwi'];
+const fruits2=['orange','grapefruit','kiwi','apple','grape'];
+const setoffruits=[...new Set([...fruits1,...fruits2])].sort((a,b)=>a.localeCompare(b));
+text="";
+for(let item of setoffruits){
+    text+=item+" ";
+}
+console.log(text);
+console.log(...setoffruits);
 //Exercise 9
+console.log(multiply(4,52,1,3,5,32));
+function multiply(first,...rest){
+    return rest.map((number)=>number=number*first);
+}
 //Exercise 10
 //Exercise 11
 //Exercise 12
