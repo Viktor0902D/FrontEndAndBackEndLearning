@@ -124,7 +124,7 @@ function reserveInventory() {
 
 async function executeCheckout(token){
     try {
-        const tokenData=await verifyToken(token);
+        const tokenData=await verifyUserSession(token);
         const results=await Promise.allSettled([processCreditCard(), reserveInventory()]);
         if(results[0].status === "rejected" && results[1].status === "fulfilled"){
             console.log(`⚠️ CRITICAL: Payment failed, but stock was reserved! Triggering rollback to return items to shelves.`);
