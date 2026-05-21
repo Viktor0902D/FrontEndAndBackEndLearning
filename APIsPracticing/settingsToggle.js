@@ -4,7 +4,7 @@
 
 async function updateUserSettings(userId,newSettings,secretToken){
     try {
-        const response=await fetch(`https://api.ourstartup.com/v1/users/{userId}/settings`,{
+        const response=await fetch(`https://api.ourstartup.com/v1/users/${userId}/settings`,{
             method:"PATCH",
             headers:{
                 "Content-Type":"application/json",
