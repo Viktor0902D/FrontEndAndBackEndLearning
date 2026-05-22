@@ -1,31 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modern Weather Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main class="weather-dashboard">
-        <header>
-            <h1>Weather in <span id="city-name">Varna</span></h1>
-        </header>
-        
-        <section class="metrics-grid">
-            <div class="card">
-                <p class="label">Temperature</p>
-                <h2 id="temperature-display">-- °C</h2>
-            </div>
+      <header>
+        <h1>Weather in <span id="city-name">Varna</span></h1>
+      </header>
 
-            <div class="card">
-                <p class="label">Wind Speed</p>
-                <h2 id="wind-display">-- km/h</h2>
-            </div>
-        </section>
+      <div
+        class="search-container"
+        style="
+          margin-bottom: 2rem;
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+        "
+      >
+        <input
+          type="text"
+          id="city-input"
+          placeholder="Enter city name..."
+          style="padding: 10px; border-radius: 5px; border: 1px solid #ccc"
+        />
+        <button
+          id="search-btn"
+          style="
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background: #3498db;
+            color: white;
+            cursor: pointer;
+          "
+        >
+          Search
+        </button>
+      </div>
+      <section class="metrics-grid">
+        <div class="card">
+          <p class="label">Temperature</p>
+          <h2 id="temperature-display">-- °C</h2>
+        </div>
+
+        <div class="card">
+          <p class="label">Wind Speed</p>
+          <h2 id="wind-display">-- km/h</h2>
+        </div>
+      </section>
     </main>
 
     <script type="module" src="app.js"></script>
-</body>
+  </body>
 </html>
