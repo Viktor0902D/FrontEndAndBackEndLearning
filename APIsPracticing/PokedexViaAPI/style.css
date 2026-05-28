@@ -1,0 +1,31 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+body { background-color: #f4f4f9; display: flex; justify-content: center; padding: 2rem; }
+.pokedex-container { width: 100%; max-width: 900px; }
+header h1 { text-align: center; color: #ef5350; font-size: 3rem; margin-bottom: 2rem; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+.card:hover { transform: translateY(-5px); }
+
+.card img { width: 120px; height: 120px; }
+.card .id { color: #888; font-size: 0.9rem; font-weight: bold; }
+.card .name { font-size: 1.2rem; margin: 0.5rem 0; text-transform: capitalize; color: #333; }
+.card .types { display: flex; justify-content: center; gap: 0.5rem; }
+.card .type { background: #eee; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.8rem; text-transform: capitalize; }
+
+.pagination { display: flex; justify-content: space-between; }
+button { padding: 0.8rem 1.5rem; background: #ef5350; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem; }
+button:disabled { background: #ccc; cursor: not-allowed; }
