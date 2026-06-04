@@ -1,4 +1,4 @@
-function debouncedSearch(callbackFunction, delay) {
+export default function debouncedSearch(callbackFunction, delay) {
   let timerId;
   return (...arg) => {
     clearTimeout(timerId);
@@ -7,4 +7,3 @@ function debouncedSearch(callbackFunction, delay) {
     }, delay);
   };
 }
-export default debouncedSearch;
